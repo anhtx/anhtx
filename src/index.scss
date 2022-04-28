@@ -1,0 +1,141 @@
+/*
+* Main
+*/
+
+.main {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    &__ticket {
+        width: 30%;
+    }
+
+    &__content {
+        width: 60%;
+    }
+
+    &__button {
+        margin-top: 40px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.image__uploads {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.image__uploads-item {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding-bottom: 10px;
+    
+    &.--border {
+        border-bottom: 1px solid #000;
+    }
+
+    + .image__uploads-item {
+        margin-top: 15px;
+    }
+}
+
+.image {
+    &__height {
+        width: 150px;
+    }
+
+    &__product-link,
+    &__product-alt {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+.mail {
+    &__header {
+        margin-bottom: 20px;
+    }
+
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.copy {
+    position: relative;
+    display: flex;
+
+    &__text {
+        margin: 0;
+        color: #ab1e1e;
+        font-weight: bold;
+        margin-right: 50px;
+    }
+    &__arrow {
+        animation: slideUpDown 1s ease-in-out infinite;
+        position: absolute;
+        right: 17px;
+    }
+}
+
+.arrow {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-left: 4px;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 4px
+    }
+
+    &::before {
+        width: 2px;
+        height: 20px;
+        left: 12px;
+        background: #115bde;
+    }
+
+    &::after {
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #115bde;
+        border-left: 2px solid #115bde;
+        transform: rotate(-135deg);
+        left: 7px
+    }
+}
+
+@keyframes slideUpDown {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(0, 10px);
+    }
+}
